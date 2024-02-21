@@ -123,7 +123,7 @@ async function displayAlbums() {
     // Load the playlist when the card is clicked
     Array.from(document.getElementsByClassName("card")).forEach(e => {
         e.addEventListener("click", async item => {
-            songs = await getSongs(`/songs/${item.currentTarget.dataset.folder}`)
+            songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`)
             // console.log(item.currentTarget);
             playMusic(songs[0])
         })
